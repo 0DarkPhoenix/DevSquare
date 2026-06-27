@@ -7,8 +7,7 @@ A hub for developers to find and share solutions for common and niche challenges
 - CSS
 
 ### Libraries/Frameworks
-- HTMX (4.0)
-- (?) Alpine.JS
+- HTMX (4.0+)
 
 ## Backend
 ### Languages
