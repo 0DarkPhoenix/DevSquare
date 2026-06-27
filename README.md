@@ -3,20 +3,20 @@ A hub for developers to find and share solutions for common and niche challenges
 
 ## Frontend
 ### Languages
-HTML
-CSS
+- HTML
+- CSS
 
 ### Libraries/Frameworks
-HTMX
-(?) Alpine.JS
+- HTMX (4.0)
+- (?) Alpine.JS
 
 ## Backend
 ### Languages
-C#
+- C#
 
 ### Libraries/Frameworks
-ASP.NET
-Dapper
+- ASP.NET
+- Dapper
 
 ## Database
-PostgresSQL
+- PostgresSQL
