@@ -17,5 +17,10 @@ A hub for developers to find and share solutions for common and niche challenges
 - ASP.NET
 - Dapper
 
+### Architecture
+- MVC Pattern
+  - Razor Views
+- REST Hypermedia API
+
 ## Database
 - PostgresSQL
