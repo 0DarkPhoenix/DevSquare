@@ -16,6 +16,7 @@ A hub for developers to find and share solutions for common and niche challenges
 ### Libraries/Frameworks
 - ASP.NET
 - Dapper
+- DbUp
 
 ### Architecture
 - MVC Pattern
