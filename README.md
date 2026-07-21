@@ -25,9 +25,11 @@ A hub for developers to find and share solutions for common and niche challenges
   - Razor Views
 - REST API (Hypermedia)
 
+### External API's
+- [Have I Been Pwned](https://haveibeenpwned.com/API/v3#PwnedPasswords)
+
 ## Database
 - PostgresSQL
-
 
 ## Account idea's
 - Able to register after active activity (not just having the browser open) after 30 minutes
