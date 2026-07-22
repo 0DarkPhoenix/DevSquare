@@ -18,7 +18,6 @@ A hub for developers to find and share solutions for common and niche challenges
 - [Dapper](https://github.com/DapperLib/Dapper)
 - [DbUp](https://dbup.readthedocs.io/en/latest/)
 - [MarkDig](https://github.com/xoofx/markdig)
-- [zxcvbn-cs](https://github.com/bitbeans/zxcvbn-cs)
 
 ### Architecture
 - MVC Pattern
