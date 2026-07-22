@@ -18,7 +18,6 @@ A hub for developers to find and share solutions for common and niche challenges
 - [Dapper](https://github.com/DapperLib/Dapper)
 - [DbUp](https://dbup.readthedocs.io/en/latest/)
 - [MarkDig](https://github.com/xoofx/markdig)
-- [zxcvbn-cs](https://github.com/bitbeans/zxcvbn-cs)
 
 ### Architecture
 - MVC Pattern
@@ -34,3 +33,6 @@ A hub for developers to find and share solutions for common and niche challenges
 ## Account idea's
 - Able to register after active activity (not just having the browser open) after 30 minutes
 - Ability to add tags (lower kebab-case) after gaining enough privelage points (see https://stackoverflow.com/help/privileges)
+
+## Miscellanious
+- Password guidelines: https://www.securden.com/blog/top-10-password-policies.html
