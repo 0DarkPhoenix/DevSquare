@@ -29,6 +29,7 @@ A hub for developers to find and share solutions for common and niche challenges
 
 ## Database
 - PostgresSQL
+  - [pg_search (by ParadeDB)](https://docs.paradedb.com/deploy/self-hosted/extension)
 
 ## Account idea's
 - Able to register after active activity (not just having the browser open) after 30 minutes
