@@ -96,3 +96,8 @@ c:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\obj\Debug\net10.0\refin
 c:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\obj\Debug\net10.0\DevSquare.pdb
 c:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\obj\Debug\net10.0\DevSquare.genruntimeconfig.cache
 c:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\obj\Debug\net10.0\ref\DevSquare.dll
+C:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\bin\Debug\net10.0\Dapper.dll
+C:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\bin\Debug\net10.0\Markdig.dll
+C:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\bin\Debug\net10.0\Npgsql.dll
+C:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\obj\Debug\net10.0\DevSquare.csproj.AssemblyReference.cache
+C:\Users\sjoer\Documents\C# Projects\devsquare\DevSquare\obj\Debug\net10.0\DevSquare.csproj.Up2Date

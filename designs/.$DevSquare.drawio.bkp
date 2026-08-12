@@ -1,0 +1,18 @@
+<mxfile host="Electron" pages="2">
+  <diagram name="Page-1" id="1mQoJE35Vr9UJaCjsbRR">
+    <mxGraphModel dx="678" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Components" id="EnyMU11Gp0Ra9XfgDH9q">
+    <mxGraphModel dx="2054" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="TEnsgzvNqZYQl88MsPaf-0" />
+        <mxCell id="TEnsgzvNqZYQl88MsPaf-1" parent="TEnsgzvNqZYQl88MsPaf-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
