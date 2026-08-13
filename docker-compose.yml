@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:18-trixie 
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: devsquare
+      POSTGRES_PASSWORD: devsquarepass
+      POSTGRES_DB: devsquare
+    volumes:
+      - ./pgdata:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+    depends_on:
+      - db
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=devsquare;Username=devsquare;Password=devsquarepass"
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/src:cached
+
+volumes:
+  db-data:
