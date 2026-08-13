@@ -1,5 +1,5 @@
 # DevSquare
-A hub for developers to find and share solutions for common and niche challenges
+A hub for developers to find and share solutions they found or came up with
 
 ## Frontend
 ### Languages
