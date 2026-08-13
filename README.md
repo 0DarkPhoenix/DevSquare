@@ -30,6 +30,7 @@ A hub for developers to find and share solutions for common and niche challenges
 ## Database
 - PostgresSQL
   - [pg_search (by ParadeDB)](https://docs.paradedb.com/deploy/self-hosted/extension)
+      - Note: [pg_textsearch](https://www.tigerdata.com/docs/deploy/tiger-cloud/tiger-cloud-aws/tiger-cloud-extensions/pg-textsearch) was also considered, but because it lacks fuzzy search and a theoretical better performance boost isn't necessary, `pg_search` will be used.
 
 ## Account idea's
 - Able to register after active activity (not just having the browser open) after 30 minutes
