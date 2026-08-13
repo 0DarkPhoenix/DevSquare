@@ -18,6 +18,7 @@ erDiagram
     }
     ARTICLE {
         bigserial id
+        uuid user_id FK
         varchar(50) title
         varchar(75) short_description
         text code_blocks "Don't apply full-text search on this column"
@@ -29,14 +30,14 @@ erDiagram
         boolean published
     }
     ARTICLE_TAG{
-        bitint article_id PK,FK 
+        bigint article_id PK,FK 
         varchar(20) tag_name PK,FK
     }
     TAG {
         varchar(20) name PK
     }
     ARTICLE_LANGUAGE {
-        bitint article_id PK,FK
+        bigint article_id PK,FK
         varchar(40) language_name PK,FK
     }
     LANGUAGE {
