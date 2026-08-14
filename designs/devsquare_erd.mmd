@@ -28,6 +28,8 @@ erDiagram
         timestamp published_at
         boolean draft
         boolean published
+        boolean blocked
+        varchar(255) blocked_reason
     }
     ARTICLE_TAG{
         bigint article_id PK,FK 
