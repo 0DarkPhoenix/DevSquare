@@ -1,0 +1,1 @@
+CREATE EXTENSION IF NOT EXISTS pg_search CASCADE; --CASCADE also runs extension activation for pgvector (see https://docs.paradedb.com/deploy/self-hosted/extension#load-the-extension)

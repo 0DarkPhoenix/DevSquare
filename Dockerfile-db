@@ -1,0 +1,31 @@
+FROM postgres:18-trixie
+
+USER root
+
+# Add PostgreSQL apt repo if needed for the version you need
+RUN apt-get update && \
+  apt-get install -y --no-install-recommends \
+  curl \
+  ca-certificates \
+  gnupg \
+  lsb-release && \
+  rm -rf /var/lib/apt/lists/*
+
+# Install libopenblas0 dependency for pg_search
+RUN apt-get update && \
+  apt-get install -y --no-install-recommends \
+  libopenblas0 && \
+  rm -rf /var/lib/apt/lists/*
+
+# Add and install pg_search
+# If your target version differs, replace pg18 below with the version you actually use.
+RUN curl -L "https://github.com/paradedb/paradedb/releases/download/v0.25.2/postgresql-18-pg-search_0.25.2-1PARADEDB-trixie_amd64.deb" -o /tmp/pg_search.deb
+RUN apt-get install -y /tmp/*.deb
+
+# Install pgvector
+RUN apt-get update && \
+  apt-get install -y --no-install-recommends \
+  postgresql-18-pgvector && \
+  rm -rf /var/lib/apt/lists/*
+
+USER postgres
