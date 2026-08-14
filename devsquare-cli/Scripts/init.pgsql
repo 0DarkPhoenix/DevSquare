@@ -46,6 +46,8 @@ CREATE TABLE article (
     CHECK (NOT (draft AND published))
 )
 
+CREATE INDEX idx_article_user_id
+    ON article (user_id);
 CREATE TRIGGER set_updated_at
 BEFORE UPDATE ON article
 FOR EACH ROW
@@ -81,6 +83,9 @@ CREATE TABLE article_tag (
     PRIMARY KEY (article_id, tag_name)
 )
 
+CREATE INDEX idx_article_tag_tag_name_article_id
+    ON article_tag (tag_name, article_id);
+
 /* LANGUAGE TABLE */
 CREATE TABLE language (
     name VARCHAR(40) PRIMARY KEY NOT NULL 
@@ -92,3 +97,6 @@ CREATE TABLE article_language (
     language_name VARCHAR(20) NOT NULL REFERENCES language(name),
     PRIMARY KEY (article_id, language_name)
 )
+
+CREATE INDEX idx_article_language_language_name_article_id
+    ON article_language (language_name, article_id);
