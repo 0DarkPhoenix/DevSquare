@@ -1,7 +1,10 @@
+using DevSquare.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
 
 var app = builder.Build();
 
