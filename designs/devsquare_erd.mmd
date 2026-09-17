@@ -1,20 +1,20 @@
 erDiagram
     direction LR
-    USER ||--o{ ARTICLE : writes
+    ACCOUNT ||--o{ ARTICLE : writes
     ARTICLE ||--|{ ARTICLE_TAG : has
     LANGUAGE ||--o{ ARTICLE_LANGUAGE : "is assigned to"
     ARTICLE ||--|{ ARTICLE_LANGUAGE : contains
     TAG ||--o{ ARTICLE_TAG : "is assigned to"
 
-    USER {
+    ACCOUNT {
         uuid id PK "Only use UUIDv7"
         varchar(40) username UK "Character limit based on Githubs username limit of 39 characters"
         varchar(255) password_hash
         varchar(255) email
         timestamp created_at
         timestamp updated_at
-        boolean blocked
-        boolean deleted
+        boolean is_blocked
+        boolean is_deleted
     }
     ARTICLE {
         bigserial id
@@ -26,9 +26,9 @@ erDiagram
         timestamp created_at
         timestamp updated_at
         timestamp published_at
-        boolean draft
-        boolean published
-        boolean blocked
+        boolean is_draft
+        boolean is_published
+        boolean is_blocked
         varchar(255) blocked_reason
     }
     ARTICLE_TAG{
