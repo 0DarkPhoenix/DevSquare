@@ -8,11 +8,11 @@ services:
       POSTGRES_USER: devsquare
       POSTGRES_PASSWORD: devsquarepass
       POSTGRES_DB: devsquare
-    volumes:
-      - ./pgdata:/var/lib/postgresql
-      - ./db/init:/docker-entrypoint-initdb.d:ro
     ports:
       - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
 
   app:
     build:
@@ -24,6 +24,6 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=devsquare;Username=devsquare;Password=devsquarepass"
     ports:
-      - "8080:80"
+      - "8080:8080"
     volumes:
       - .:/src:cached

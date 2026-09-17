@@ -1,6 +1,6 @@
 ﻿using DbUp;
 
-string connectionString = args.FirstOrDefault() ?? "Server=localhost:5432;Database=devsquare;User Id=sa;Password=yourStrong(!)Password;";
+string connectionString = args.FirstOrDefault() ?? "Server=localhost:5432;Database=devsquare;User Id=devsquare;Password=devsquarepass;";
 
 EnsureDatabase.For.PostgresqlDatabase(connectionString);
 

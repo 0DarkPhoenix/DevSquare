@@ -1,22 +1,35 @@
-# Stage 1: build/publish
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
-# Copy project file first for better layer caching
-COPY ["DevSquare/DevSquare.csproj", "DevSquare/"]
-RUN dotnet restore "DevSquare/DevSquare.csproj"
+# Restore first with only minimal files
+COPY DevSquare/DevSquare.csproj ./DevSquare/
+# COPY NuGet.Config ./
+# COPY global.json ./
+# COPY Directory.Build.props ./
+# COPY Directory.Build.targets ./
 
-# Copy the rest of the source
-COPY . .
-RUN dotnet publish "DevSquare/DevSquare.csproj" -c Release -o /app/publish 
+RUN --mount=type=cache,id=nuget,target=/root/.nuget/packages \
+    dotnet restore ./DevSquare/DevSquare.csproj
 
-# Stage 2: run
+# Copy only app source, not the whole repo
+COPY DevSquare/ ./DevSquare/
+
+WORKDIR /src/DevSquare
+RUN --mount=type=cache,id=nuget,target=/root/.nuget/packages \
+    dotnet publish DevSquare.csproj -c Release -o /app/publish \
+    --no-restore \
+    /p:UseAppHost=false \
+    /p:PublishSingleFile=false \
+    /p:PublishTrimmed=false
+
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
 
-ENV ASPNETCORE_URLS=http://+:80
-EXPOSE 80
+ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8080
 
+# Only copy the published app, not the source code
 COPY --from=build /app/publish .
 
+USER app
 ENTRYPOINT ["dotnet", "DevSquare.dll"]
